@@ -1,0 +1,15 @@
+{
+    "icon" : "integration/simulator_icon.png",
+    "title" : "Fenics Simulator",
+    "description" : "FEniCS S=simulator plugin to study partial differential equations.",
+    "version" : "1.0.0",
+    "sim4life" : "9.0.0",
+    "author" : "Manuel Guidon",
+    "author_email" : "guidon@zmt.swiss",
+    "details" : "README.md",
+    "license" : "LICENSE",
+    "tags" : ["Multi Physics", "Partial Differential Equations"],
+    "links" : {"repository" : "github.com/yourusername/yourrepository",
+              "website" : "https://yourwebsite.com",
+              "documentation" : "https://yourwebsite.com/docs"}
+}

@@ -1,0 +1,6 @@
+ipympl
+meshio
+h5py
+pyvista
+dataclasses_json
+tqdm
