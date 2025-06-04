@@ -59,12 +59,12 @@ def main() -> tuple[ut.FenicsxProblem, bool]:
             MESH_DOMAINS_PTH, MESH_PATCHES_PTH, problem.results_dir
         )
 
-    if MPI.COMM_WORLD.size == 1:
-        problem.mesh_data.display_mesh(
-            False, save_path=problem.results_dir / "mesh.pdf"
-        )
-    else:
-        ut.info_log("To preview imported mesh run on a single process", True)
+    # if MPI.COMM_WORLD.size == 1:
+    #     problem.mesh_data.display_mesh(
+    #         False, save_path=problem.results_dir / "mesh.pdf"
+    #     )
+    # else:
+    #     ut.info_log("To preview imported mesh run on a single process", True)
 
     # Form Definition
 

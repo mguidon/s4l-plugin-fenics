@@ -37,6 +37,15 @@ docker-image-dev docker-image-dev-nc: ## create the fenics docker image without 
 	cd ${makefile_dir} &&\
 	 docker build . $(if $(findstring -nc,$@),--no-cache,) --build-arg PIP_FLAGS= --tag fenicsx_runner:latest -f docker/Dockerfile
 
+docker-image-prod: docker-image ## create the fenics docker image for production
+	cd ${makefile_dir} &&\
+	 docker build . --tag s4l-plugin-fenics-runner:prod -f docker/Dockerfile.prod
+
+publish: docker-image-prod ## publish the fenics docker image to the registry
+	docker tag s4l-plugin-fenics-runner:prod mguidon/s4l-plugin-fenics-runner:prod
+	docker push mguidon/s4l-plugin-fenics-runner:prod
+
+
 .PHONY: help
 
 help: ## display all callable targets

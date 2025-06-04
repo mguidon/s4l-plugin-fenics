@@ -9,7 +9,6 @@ setup(
     packages=find_packages(where="src"),  # This finds packages inside src
     python_requires=">=3.11",
     install_requires=[
-        "s4l_core",  # Core package dependency
     ],
     entry_points={
         "s4l.simulator_plugins": [

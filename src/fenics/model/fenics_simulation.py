@@ -141,7 +141,7 @@ class FenicsSimulation(SimulationBase):
         )
 
     def solver_backend(self) -> tuple[SolverBackend, config_type_t | None]:
-        return SolverBackend.DIND, self._create_project_config()
+        return SolverBackend.PROOT, self._create_project_config()
 
     def _prepare_inputs(self) -> Path:
         logger.info(f"Running problem in: {self.project_root / self.results_dir}")
