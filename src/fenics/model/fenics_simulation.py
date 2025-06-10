@@ -125,10 +125,11 @@ class FenicsSimulation(SimulationBase):
         assert field_type in {"real", "complex"}
 
         source_script = f"source /usr/local/bin/dolfin-{field_type}-mode"
+        conda_prefix = "/opt/conda" if field_type == "real" else "/opt/conda-complex"
         if num_processes == 1:
             mpi_prefix = ""
         else:
-            mpi_prefix = f"/opt/conda/bin/mpirun -np {num_processes} "
+            mpi_prefix = f"{conda_prefix}/bin/mpirun -np {num_processes} "
 
         solver_dir = get_source_spec()
 
@@ -143,7 +144,7 @@ class FenicsSimulation(SimulationBase):
             )
         
         config = {
-            "cmd" : [source_script, "&&", mpi_prefix, "/opt/conda/bin/python3", str(solver_enty_point), "-i", str(inputs_dir), "-o", str(outputs_dir)],
+            "cmd" : [source_script, "&&", mpi_prefix, f"{conda_prefix}/bin/python3", str(solver_enty_point), "-i", str(inputs_dir), "-o", str(outputs_dir)],
             "cwd:" : "/fenics_driver",
             "env" : {"OMP_NUM_THREADS" : "1"}
         }
