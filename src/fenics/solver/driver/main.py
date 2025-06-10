@@ -3,12 +3,31 @@
 import os
 import sys
 from pathlib import Path
+import argparse
 
 import core_utils
 
-WORK_DIR = Path("/work")
-INPUT_DIR = WORK_DIR / "input_files"
-OUTPUT_DIR = WORK_DIR / "output_files"
+parser = argparse.ArgumentParser(description="Heat Conduction Solver")
+parser.add_argument(
+    "-i",
+    "--inputfolder",
+    type=str,
+    required=True,
+    help="Path to simulation input JSON file containing model parameters"
+)
+
+parser.add_argument(
+    "-o",
+    "--outputfolder",
+    type=str,
+    required=True,
+    help="Path to output folder for solver results and visualization files"
+)
+
+args = parser.parse_args()
+
+INPUT_DIR = Path(args.inputfolder)
+OUTPUT_DIR = Path(args.outputfolder)
 
 INPUT_FILE = INPUT_DIR / "input_file.json"
 MESH_DOMAINS_PTH = INPUT_DIR / "mesh-domains.vtu"
@@ -36,7 +55,7 @@ def main() -> tuple[ut.FenicsxProblem, bool]:
         f"dolfinx version: {dolfinx.__version__}",  # pyright: ignore[reportPrivateImportUsage]
         True,
     )
-    ut.info_log(f"LD_LIBRARY_PATH: {os.environ['LD_LIBRARY_PATH']}", True)
+    ut.info_log(f"LD_LIBRARY_PATH: {os.environ.get('LD_LIBRARY_PATH', 'Not set')}", True)
 
     # Problem definitions
 
@@ -59,6 +78,7 @@ def main() -> tuple[ut.FenicsxProblem, bool]:
             MESH_DOMAINS_PTH, MESH_PATCHES_PTH, problem.results_dir
         )
 
+    # TODO: MaG uncomment this once mesh preview is working
     # if MPI.COMM_WORLD.size == 1:
     #     problem.mesh_data.display_mesh(
     #         False, save_path=problem.results_dir / "mesh.pdf"

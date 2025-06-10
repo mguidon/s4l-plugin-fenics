@@ -28,17 +28,13 @@ logger = logging.getLogger(__name__)
 
 domain_id_map_t = dict[str, int]  # map from uuid (as str) to the domain id
 
-def create_default_config(cmd: list[str]) -> config_type_t:
-    return {
-        "Cmd": cmd,
-        "Image": "fenicsx_runner:latest",
-        "AttachStdin": False,
-        "AttachStdout": True,
-        "AttachStderr": True,
-        "Tty": False,
-        "OpenStdin": False,
-        "WorkingDir": "/driver",
-    }
+
+def get_source_spec()->Path:
+    src_spec = find_spec("fenics.solver.driver")
+    assert src_spec is not None
+    assert src_spec.origin is not None
+    
+    return Path(src_spec.origin).parent
 
 class FenicsSimulation(SimulationBase):
     """Concrete implementation of the Simulation class."""
@@ -122,26 +118,40 @@ class FenicsSimulation(SimulationBase):
             0,
             1,
         )
-    
-
 
     def _create_project_config(self ) -> config_type_t:
         solver_settings = self.solver_settings.as_api_model()
         num_processes, field_type = solver_settings.num_processes, solver_settings.field_type.lower()
         assert field_type in {"real", "complex"}
+
+        source_script = f"source /usr/local/bin/dolfin-{field_type}-mode"
         if num_processes == 1:
             mpi_prefix = ""
         else:
-            mpi_prefix = f"mpirun -np {num_processes} "
+            mpi_prefix = f"/opt/conda/bin/mpirun -np {num_processes} "
 
-        return create_default_config(
-            [
-                f"source /usr/local/bin/dolfinx-{field_type}-mode && {mpi_prefix} python3 main.py"
-            ]
-        )
+        solver_dir = get_source_spec()
+
+        inputs_dir = self.project_root / self.results_dir / "input_files"
+        outputs_dir = self.project_root / self.results_dir / "output_files"
+
+        solver_enty_point = solver_dir / "main.py"
+
+        if not solver_enty_point.is_file():
+            raise FileNotFoundError(
+                f"Solver entry point not found: {solver_enty_point}"
+            )
+        
+        config = {
+            "cmd" : [source_script, "&&", mpi_prefix, "/opt/conda/bin/python3", str(solver_enty_point), "-i", str(inputs_dir), "-o", str(outputs_dir)],
+            "cwd:" : "/fenics_driver",
+            "env" : {"OMP_NUM_THREADS" : "1"}
+        }
+
+        return config        
 
     def solver_backend(self) -> tuple[SolverBackend, config_type_t | None]:
-        return SolverBackend.PROOT, self._create_project_config()
+        return SolverBackend.PROCESS, self._create_project_config()
 
     def _prepare_inputs(self) -> Path:
         logger.info(f"Running problem in: {self.project_root / self.results_dir}")
@@ -174,11 +184,7 @@ class FenicsSimulation(SimulationBase):
         with open(inputs_dir / "input_file.json", "w") as fh:
             json.dump(dataclasses.asdict(self.as_api_model()), fh, indent=4)
 
-        src_spec = find_spec("fenics.solver.driver")
-        assert src_spec is not None
-        assert src_spec.origin is not None
-
-        return Path(src_spec.origin).parent
+        return get_source_spec()
 
     def clear_status_recursively(self) -> None:
         super().clear_status_recursively()
