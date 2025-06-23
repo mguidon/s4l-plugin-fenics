@@ -1,0 +1,4 @@
+{
+  "simulation": "linear_elasticity_2d",
+  "description": "Pre-configured linear elasticity simulation on a rectangle."
+}

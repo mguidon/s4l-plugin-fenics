@@ -1,0 +1,26 @@
+site_name: Sim4Life FEniCS Plugin
+site_description: Documentation and examples for the Sim4Life FEniCS plugin
+site_author: Your Name
+repo_url: https://github.com/your-org/s4l-plugin-fenics
+repo_name: GitHub
+docs_dir: .
+site_dir: ../site
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+nav:
+  - Home: index.md
+  - Examples:
+      - Example 1: examples/example1/README.md
+      - Example 2: examples/example2/README.md
+      - Example 3: examples/example3/README.md
+      - Example 4: examples/example4/README.md
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
