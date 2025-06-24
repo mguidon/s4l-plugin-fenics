@@ -80,3 +80,6 @@ ipython_config.py
 
 # Rope project settings
 .ropeproject
+
+# docs
+site
