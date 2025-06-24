@@ -60,6 +60,7 @@ The plugin supports several categories of equations, each tailored to common cla
 | Magnetic Dipole        | PDE/Weak Form| Magnetostatics, Poisson’s equation   |
 | Quantum Tunneling      | PDE          | Time-dependent Schrödinger equation  |
 | Stokes Flow            | Weak Form    | Fluid dynamics, Stokes equations     |
+| Deformed Cantilever    | Solid Mechanics | Thermoelasticity, linear elasticity   |
 
 ---
 
@@ -90,5 +91,14 @@ The plugin supports several categories of equations, each tailored to common cla
 
 ---
 
+
 For detailed example setups, see the `doc/examples` folder. Each example includes a physical background, model setup, and instructions for loading into Sim4Life.
+
+- [Harmonic Oscillator: Quantum Eigenvalues](doc/examples/harmonic_oscillator/README.md)
+- [Magnetic Dipole: Magnetized Sphere](doc/examples/magnetic_dipole/README.md)
+- [Quantum Tunneling](doc/examples/quantum_tunneling/README.md)
+- [Stokes Flow Past a Sphere](doc/examples/stokes_flow/README.md)
+- [Deformed Cantilever: Thermoelastic Beam](doc/examples/deformed_cantilever/README.md)
+
+Explore each example for ready-to-use simulation setups and meshes.
 

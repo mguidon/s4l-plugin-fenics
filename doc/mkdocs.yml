@@ -12,6 +12,19 @@ theme:
     - navigation.top
     - search.suggest
     - search.highlight
+  palette:
+    - scheme: slate  # Enables dark mode
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
 nav:
   - Home: index.md
   - Examples:
@@ -19,6 +32,7 @@ nav:
       - Harmonic Oscillator: examples/harmonic_oscillator/README.md
       - Stokes Flow: examples/stokes_flow/README.md
       - Magnetic Dipole: examples/magnetic_dipole/README.md
+      - Deformed Cantilever: examples/deformed_cantilever/README.md
 markdown_extensions:
   - admonition
   - codehilite

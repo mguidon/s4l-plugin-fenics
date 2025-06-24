@@ -81,6 +81,7 @@ The Sim4Life FEniCS plugin supports several categories of equations, each tailor
 | Magnetic Dipole        | PDE/Weak Form| Magnetostatics, Poisson’s equation   |
 | Quantum Tunneling      | PDE          | Time-dependent Schrödinger equation  |
 | Stokes Flow            | Weak Form    | Fluid dynamics, Stokes equations     |
+| Deformed Cantilever    | Solid Mechanics | Thermoelasticity, linear elasticity   |
 
 ---
 
@@ -100,5 +101,6 @@ The Sim4Life FEniCS plugin supports several categories of equations, each tailor
 - [Magnetic Dipole: Magnetized Sphere](examples/magnetic_dipole/README.md)
 - [Quantum Tunneling](examples/quantum_tunneling/README.md)
 - [Stokes Flow Past a Sphere](examples/stokes_flow/README.md)
+- [Deformed Cantilever: Thermoelastic Beam](examples/deformed_cantilever/README.md)
 
 Explore each example for ready-to-use simulation setups and meshes.
