@@ -27,11 +27,78 @@ This design enables users to run complex finite element simulations within Sim4L
 
 Simulation results produced by the FEniCS solver are fully compatible with the Sim4Life postprocessing pipeline. Results can be directly viewed, inspected, and analyzed using the integrated Sim4Life viewers, allowing for efficient visualization and further analysis without additional conversion steps.
 
+---
+
+## Supported Equation Categories
+
+The Sim4Life FEniCS plugin supports several categories of equations, each tailored to common classes of physics problems:
+
+### 1. **PDE (Partial Differential Equation)**
+- **Purpose:** Solve standard scalar PDEs such as diffusion, heat conduction, and Poisson’s equation.
+- **User Inputs:** Diffusion coefficient, linear term, source term, divergence term, boundary conditions.
+- **Example Equation:**  
+  $$
+  \nabla \cdot (c \nabla u) + l u + \nabla \cdot \mathbf{M} + f = 0
+  $$
+- **Typical Applications:**  
+  - Heat transfer: $c$ = thermal conductivity, $u$ = temperature  
+  - Electrostatics: $c$ = permittivity, $u$ = potential  
+  - Diffusion: $c$ = diffusion coefficient, $u$ = concentration
+
+### 2. **Solid Mechanics**
+- **Purpose:** Model linear elasticity and structural mechanics problems.
+- **User Inputs:** Young’s modulus, Poisson’s ratio, body force, thermal expansion, displacement/traction boundary conditions.
+- **Example Equation:**  
+  $$
+  \nabla \cdot \sigma + \mathbf{F} = 0
+  $$
+  where $\sigma$ is the stress tensor, $\mathbf{F}$ is the body force.
+- **Typical Applications:**  
+  - Deformation of solids under load  
+  - Thermoelasticity  
+  - Biomechanics
+
+### 3. **Weak Form**
+- **Purpose:** Directly specify custom variational (weak) forms for advanced or non-standard problems.
+- **User Inputs:** UFL (Unified Form Language) expressions for bilinear and linear forms, integration domains, boundary conditions.
+- **Example Equation:**  
+  $$
+  \int_\Omega \nabla u \cdot \nabla v \, dx = \int_\Omega f v \, dx
+  $$
+  (or any custom weak form)
+- **Typical Applications:**  
+  - Stokes flow (fluid dynamics)  
+  - Mixed finite element methods  
+  - Custom multiphysics couplings
+
+---
+
+## Example Applications
+
+| Example                | Category      | Physics/Equation Type                |
+|------------------------|--------------|--------------------------------------|
+| Harmonic Oscillator    | PDE          | Quantum mechanics, eigenvalue problem|
+| Magnetic Dipole        | PDE/Weak Form| Magnetostatics, Poisson’s equation   |
+| Quantum Tunneling      | PDE          | Time-dependent Schrödinger equation  |
+| Stokes Flow            | Weak Form    | Fluid dynamics, Stokes equations     |
+
+---
+
+## How It Works
+
+1. **Create a Simulation:** Select "FEniCS" as the simulation type in Sim4Life.
+2. **Add Equations:** Choose from PDE, Solid Mechanics, or Weak Form. Assign them to mesh domains.
+3. **Set Parameters:** Enter coefficients, material properties, or custom expressions as needed.
+4. **Define Boundary Conditions:** Apply Dirichlet (fixed value) or Neumann/flux (derivative) conditions to boundaries.
+5. **Run and Analyze:** Solve the problem and visualize results within Sim4Life.
+
+---
+
 ## Examples
 
-- [Example 1: Poisson Equation on a Unit Square](examples/example1/README.md)
-- [Example 2: Linear Elasticity in 2D](examples/example2/README.md)
-- [Example 3: Heat Equation (Transient)](examples/example3/README.md)
-- [Example 4: Laplace Equation on a Circle](examples/example4/README.md)
+- [Harmonic Oscillator: Quantum Eigenvalues](examples/harmonic_oscillator/README.md)
+- [Magnetic Dipole: Magnetized Sphere](examples/magnetic_dipole/README.md)
+- [Quantum Tunneling](examples/quantum_tunneling/README.md)
+- [Stokes Flow Past a Sphere](examples/stokes_flow/README.md)
 
 Explore each example for ready-to-use simulation setups and meshes.
