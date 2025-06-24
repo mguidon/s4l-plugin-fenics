@@ -322,6 +322,48 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seamless-postprocessing-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seamless Postprocessing Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
       Examples
@@ -471,6 +513,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="examples/quantum_tunneling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quantum Tunneling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -505,6 +570,48 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seamless-postprocessing-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seamless Postprocessing Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
       Examples
@@ -533,7 +640,28 @@
 
 
 <h1 id="sim4life-fenics-plugin-documentation">Sim4Life FEniCS Plugin Documentation<a class="headerlink" href="#sim4life-fenics-plugin-documentation" title="Permanent link">&para;</a></h1>
-<p>Welcome to the documentation for the Sim4Life FEniCS plugin. Here you will find example projects, guides, and explanations to help you get started with simulation setups using FEniCS in Sim4Life.</p>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>The FEniCS solver in this plugin provides a modular finite element simulation backend for Sim4Life. It leverages the FEniCS finite element library to solve a wide range of partial differential equations (PDEs) defined within the Sim4Life environment. The solver supports stationary (steady-state), eigenvalue, and time-domain (transient) simulations, making it suitable for a variety of physical modeling tasks.</p>
+<h3 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>General PDE Solving</strong>: Supports the solution of general PDEs using the finite element method.</li>
+<li><strong>Multiple Simulation Types</strong>: Handles stationary, eigenvalue, and time-domain problems.</li>
+<li><strong>Sim4Life Integration</strong>: Reads simulation definitions, meshes, and boundary conditions exported from Sim4Life.</li>
+<li><strong>Automated Workflow</strong>: Imports mesh and model data, assembles variational forms, applies boundary conditions, solves the problem, and exports results for visualization.</li>
+<li><strong>Extensible Design</strong>: Modular structure allows for easy extension with new equations, boundary conditions, and post-processing routines.</li>
+<li><strong>Real and Complex Problems</strong>: Supports both real-valued and complex-valued simulations, enabling a wide range of physical applications.</li>
+</ul>
+<h3 id="workflow-overview">Workflow Overview<a class="headerlink" href="#workflow-overview" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Input Preparation</strong>: Simulation definitions and mesh data are exported from Sim4Life as JSON and VTU files.</li>
+<li><strong>Solver Initialization</strong>: The main solver script loads the input, prepares the mesh, and sets up the problem.</li>
+<li><strong>Problem Assembly</strong>: Function spaces, variational forms, and boundary conditions are created based on the user-defined model.</li>
+<li><strong>Solving</strong>: The appropriate solver is selected based on the simulation type (stationary, eigenvalue, or time-domain).</li>
+<li><strong>Result Export</strong>: Simulation results are written to VTK files for visualization and further analysis.</li>
+</ol>
+<p>This design enables users to run complex finite element simulations within Sim4Life, while benefiting from the flexibility and power of the FEniCS library.</p>
+<h3 id="seamless-postprocessing-integration">Seamless Postprocessing Integration<a class="headerlink" href="#seamless-postprocessing-integration" title="Permanent link">&para;</a></h3>
+<p>Simulation results produced by the FEniCS solver are fully compatible with the Sim4Life postprocessing pipeline. Results can be directly viewed, inspected, and analyzed using the integrated Sim4Life viewers, allowing for efficient visualization and further analysis without additional conversion steps.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="examples/example1/">Example 1: Poisson Equation on a Unit Square</a></li>
@@ -600,6 +728,8 @@
     
     
       <script src="assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

@@ -19,8 +19,13 @@ nav:
       - Example 2: examples/example2/README.md
       - Example 3: examples/example3/README.md
       - Example 4: examples/example4/README.md
+      - Quantum Tunneling: examples/quantum_tunneling/README.md
 markdown_extensions:
   - admonition
   - codehilite
   - toc:
       permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

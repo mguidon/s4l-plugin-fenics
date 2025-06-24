@@ -21,7 +21,7 @@ install: venv ## Install requirements into the virtual environment
 	$(PIP) install -r requirements.txt
 
 serve: ## Serve the documentation locally using mkdocs
-	$(MKDOCS) serve -f mkdocs.yml
+	$(MKDOCS) serve -f mkdocs.yml -a 0.0.0.0:8000
 
 build: ## Build the static documentation site
 	$(MKDOCS) build -f mkdocs.yml
