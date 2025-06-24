@@ -13,23 +13,23 @@
       
       
       
+        <link rel="prev" href="../magnetic_dipole/">
       
-        <link rel="next" href="examples/quantum_tunneling/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Sim4Life FEniCS Plugin</title>
+        <title>Deformed Cantilever - Sim4Life FEniCS Plugin</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sim4life-fenics-plugin-documentation" class="md-skip">
+        <a href="#thermally-deformed-cantilever" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Sim4Life FEniCS Plugin" class="md-header__button md-logo" aria-label="Sim4Life FEniCS Plugin" data-md-component="logo">
+    <a href="../.." title="Sim4Life FEniCS Plugin" class="md-header__button md-logo" aria-label="Sim4Life FEniCS Plugin" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Deformed Cantilever
             
           </span>
         </div>
@@ -219,11 +219,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -240,11 +238,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="examples/quantum_tunneling/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../quantum_tunneling/" class="md-tabs__link">
           
   
   
@@ -278,7 +278,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Sim4Life FEniCS Plugin" class="md-nav__button md-logo" aria-label="Sim4Life FEniCS Plugin" data-md-component="logo">
+    <a href="../.." title="Sim4Life FEniCS Plugin" class="md-nav__button md-logo" aria-label="Sim4Life FEniCS Plugin" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -305,32 +305,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -341,137 +319,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Introduction">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Features
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#workflow-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Workflow Overview
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#seamless-postprocessing-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Seamless Postprocessing Integration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-equation-categories" class="md-nav__link">
-    <span class="md-ellipsis">
-      Supported Equation Categories
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Supported Equation Categories">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-pde-partial-differential-equation" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. PDE (Partial Differential Equation)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-solid-mechanics" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Solid Mechanics
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-weak-form" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Weak Form
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-applications" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Applications
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      How It Works
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Examples
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -480,24 +327,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -510,7 +362,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Examples
@@ -524,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/quantum_tunneling/" class="md-nav__link">
+      <a href="../quantum_tunneling/" class="md-nav__link">
         
   
   
@@ -547,7 +399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/harmonic_oscillator/" class="md-nav__link">
+      <a href="../harmonic_oscillator/" class="md-nav__link">
         
   
   
@@ -570,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/stokes_flow/" class="md-nav__link">
+      <a href="../stokes_flow/" class="md-nav__link">
         
   
   
@@ -593,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="examples/magnetic_dipole/" class="md-nav__link">
+      <a href="../magnetic_dipole/" class="md-nav__link">
         
   
   
@@ -613,10 +465,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="examples/deformed_cantilever/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Deformed Cantilever
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -627,6 +501,113 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#physics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-simulation-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Simulation Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-solver-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Solver Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-equation-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Equation Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-material-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Material Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-boundary-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Boundary Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Results
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -666,37 +647,82 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
+  <a href="#physics" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction
+      Physics
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Introduction">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
+  <a href="#1-model" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Features
+      1. Model
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#workflow-overview" class="md-nav__link">
+  <a href="#2-simulation-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      Workflow Overview
+      2. Simulation Settings
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#seamless-postprocessing-integration" class="md-nav__link">
+  <a href="#3-solver-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      Seamless Postprocessing Integration
+      3. Solver Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-equation-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Equation Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-material-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Material Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-boundary-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Boundary Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Results
     </span>
   </a>
   
@@ -704,75 +730,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-equation-categories" class="md-nav__link">
-    <span class="md-ellipsis">
-      Supported Equation Categories
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Supported Equation Categories">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-pde-partial-differential-equation" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. PDE (Partial Differential Equation)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-solid-mechanics" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Solid Mechanics
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-weak-form" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Weak Form
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-applications" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Applications
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      How It Works
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Examples
-    </span>
-  </a>
   
 </li>
       
@@ -795,130 +752,45 @@
   
 
 
-<h1 id="sim4life-fenics-plugin-documentation">Sim4Life FEniCS Plugin Documentation<a class="headerlink" href="#sim4life-fenics-plugin-documentation" title="Permanent link">&para;</a></h1>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>The FEniCS solver in this plugin provides a modular finite element simulation backend for Sim4Life. It leverages the FEniCS finite element library to solve a wide range of partial differential equations (PDEs) defined within the Sim4Life environment. The solver supports stationary (steady-state), eigenvalue, and time-domain (transient) simulations, making it suitable for a variety of physical modeling tasks.</p>
-<h3 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>General PDE Solving</strong>: Supports the solution of general PDEs using the finite element method.</li>
-<li><strong>Multiple Simulation Types</strong>: Handles stationary, eigenvalue, and time-domain problems.</li>
-<li><strong>Sim4Life Integration</strong>: Reads simulation definitions, meshes, and boundary conditions exported from Sim4Life.</li>
-<li><strong>Automated Workflow</strong>: Imports mesh and model data, assembles variational forms, applies boundary conditions, solves the problem, and exports results for visualization.</li>
-<li><strong>Extensible Design</strong>: Modular structure allows for easy extension with new equations, boundary conditions, and post-processing routines.</li>
-<li><strong>Real and Complex Problems</strong>: Supports both real-valued and complex-valued simulations, enabling a wide range of physical applications.</li>
-</ul>
-<h3 id="workflow-overview">Workflow Overview<a class="headerlink" href="#workflow-overview" title="Permanent link">&para;</a></h3>
-<ol>
-<li><strong>Input Preparation</strong>: Simulation definitions and mesh data are exported from Sim4Life as JSON and VTU files.</li>
-<li><strong>Solver Initialization</strong>: The main solver script loads the input, prepares the mesh, and sets up the problem.</li>
-<li><strong>Problem Assembly</strong>: Function spaces, variational forms, and boundary conditions are created based on the user-defined model.</li>
-<li><strong>Solving</strong>: The appropriate solver is selected based on the simulation type (stationary, eigenvalue, or time-domain).</li>
-<li><strong>Result Export</strong>: Simulation results are written to VTK files for visualization and further analysis.</li>
-</ol>
-<p>This design enables users to run complex finite element simulations within Sim4Life, while benefiting from the flexibility and power of the FEniCS library.</p>
-<h3 id="seamless-postprocessing-integration">Seamless Postprocessing Integration<a class="headerlink" href="#seamless-postprocessing-integration" title="Permanent link">&para;</a></h3>
-<p>Simulation results produced by the FEniCS solver are fully compatible with the Sim4Life postprocessing pipeline. Results can be directly viewed, inspected, and analyzed using the integrated Sim4Life viewers, allowing for efficient visualization and further analysis without additional conversion steps.</p>
+<h1 id="thermally-deformed-cantilever">Thermally Deformed Cantilever<a class="headerlink" href="#thermally-deformed-cantilever" title="Permanent link">&para;</a></h1>
+<p>This example demonstrates how to use the Sim4Life-FEniCS plugin to simulate the thermal deformation of a cantilever beam using solid mechanics.</p>
+<h2 id="physics">Physics<a class="headerlink" href="#physics" title="Permanent link">&para;</a></h2>
+<p>A cantilever beam made of aluminium (100 mm × 3 mm × 2.5 mm) is clamped at one end and free at the other. A temperature profile is applied along the height of the beam, causing it to deform due to thermal expansion. The simulation solves the linear elasticity equations with thermal expansion, computing the resulting displacement field.</p>
 <hr />
-<h2 id="supported-equation-categories">Supported Equation Categories<a class="headerlink" href="#supported-equation-categories" title="Permanent link">&para;</a></h2>
-<p>The Sim4Life FEniCS plugin supports several categories of equations, each tailored to common classes of physics problems:</p>
-<h3 id="1-pde-partial-differential-equation">1. <strong>PDE (Partial Differential Equation)</strong><a class="headerlink" href="#1-pde-partial-differential-equation" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Purpose:</strong> Solve standard scalar PDEs such as diffusion, heat conduction, and Poisson’s equation.</li>
-<li><strong>User Inputs:</strong> Diffusion coefficient, linear term, source term, divergence term, boundary conditions.</li>
-<li><strong>Example Equation:</strong><br />
-  $$
-  \nabla \cdot (c \nabla u) + l u + \nabla \cdot \mathbf{M} + f = 0
-  $$</li>
-<li><strong>Typical Applications:</strong>  </li>
-<li>Heat transfer: <span class="arithmatex">\(c\)</span> = thermal conductivity, <span class="arithmatex">\(u\)</span> = temperature  </li>
-<li>Electrostatics: <span class="arithmatex">\(c\)</span> = permittivity, <span class="arithmatex">\(u\)</span> = potential  </li>
-<li>Diffusion: <span class="arithmatex">\(c\)</span> = diffusion coefficient, <span class="arithmatex">\(u\)</span> = concentration</li>
-</ul>
-<h3 id="2-solid-mechanics">2. <strong>Solid Mechanics</strong><a class="headerlink" href="#2-solid-mechanics" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Purpose:</strong> Model linear elasticity and structural mechanics problems.</li>
-<li><strong>User Inputs:</strong> Young’s modulus, Poisson’s ratio, body force, thermal expansion, displacement/traction boundary conditions.</li>
-<li><strong>Example Equation:</strong><br />
-  $$
-  \nabla \cdot \sigma + \mathbf{F} = 0
-  $$
-  where <span class="arithmatex">\(\sigma\)</span> is the stress tensor, <span class="arithmatex">\(\mathbf{F}\)</span> is the body force.</li>
-<li><strong>Typical Applications:</strong>  </li>
-<li>Deformation of solids under load  </li>
-<li>Thermoelasticity  </li>
-<li>Biomechanics</li>
-</ul>
-<h3 id="3-weak-form">3. <strong>Weak Form</strong><a class="headerlink" href="#3-weak-form" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Purpose:</strong> Directly specify custom variational (weak) forms for advanced or non-standard problems.</li>
-<li><strong>User Inputs:</strong> UFL (Unified Form Language) expressions for bilinear and linear forms, integration domains, boundary conditions.</li>
-<li><strong>Example Equation:</strong><br />
-  $$
-  \int_\Omega \nabla u \cdot \nabla v \, dx = \int_\Omega f v \, dx
-  $$
-  (or any custom weak form)</li>
-<li><strong>Typical Applications:</strong>  </li>
-<li>Stokes flow (fluid dynamics)  </li>
-<li>Mixed finite element methods  </li>
-<li>Custom multiphysics couplings</li>
-</ul>
+<h2 id="step-by-step">Step-by-Step<a class="headerlink" href="#step-by-step" title="Permanent link">&para;</a></h2>
+<h3 id="1-model">1. Model<a class="headerlink" href="#1-model" title="Permanent link">&para;</a></h3>
+<p>The geometry consists of a rectangular cantilever beam, clamped at the root and free at the tip.</p>
+<p><img alt="Model" src="screenshots/model.png" /></p>
 <hr />
-<h2 id="example-applications">Example Applications<a class="headerlink" href="#example-applications" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Example</th>
-<th>Category</th>
-<th>Physics/Equation Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Harmonic Oscillator</td>
-<td>PDE</td>
-<td>Quantum mechanics, eigenvalue problem</td>
-</tr>
-<tr>
-<td>Magnetic Dipole</td>
-<td>PDE/Weak Form</td>
-<td>Magnetostatics, Poisson’s equation</td>
-</tr>
-<tr>
-<td>Quantum Tunneling</td>
-<td>PDE</td>
-<td>Time-dependent Schrödinger equation</td>
-</tr>
-<tr>
-<td>Stokes Flow</td>
-<td>Weak Form</td>
-<td>Fluid dynamics, Stokes equations</td>
-</tr>
-<tr>
-<td>Deformed Cantilever</td>
-<td>Solid Mechanics</td>
-<td>Thermoelasticity, linear elasticity</td>
-</tr>
-</tbody>
-</table>
+<h3 id="2-simulation-settings">2. Simulation Settings<a class="headerlink" href="#2-simulation-settings" title="Permanent link">&para;</a></h3>
+<p>A new simulation is created and the solid mechanics equation is added.</p>
+<p><img alt="Simulation Settings" src="screenshots/simulation_settings.png" /></p>
 <hr />
-<h2 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>Create a Simulation:</strong> Select "FEniCS" as the simulation type in Sim4Life.</li>
-<li><strong>Add Equations:</strong> Choose from PDE, Solid Mechanics, or Weak Form. Assign them to mesh domains.</li>
-<li><strong>Set Parameters:</strong> Enter coefficients, material properties, or custom expressions as needed.</li>
-<li><strong>Define Boundary Conditions:</strong> Apply Dirichlet (fixed value) or Neumann/flux (derivative) conditions to boundaries.</li>
-<li><strong>Run and Analyze:</strong> Solve the problem and visualize results within Sim4Life.</li>
-</ol>
+<h3 id="3-solver-settings">3. Solver Settings<a class="headerlink" href="#3-solver-settings" title="Permanent link">&para;</a></h3>
+<p>The solver is configured to use a linear, iterative method with tight tolerances for accurate results.</p>
+<p><img alt="Solver Settings" src="screenshots/solver_settings.png" /></p>
 <hr />
-<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h3 id="4-equation-settings">4. Equation Settings<a class="headerlink" href="#4-equation-settings" title="Permanent link">&para;</a></h3>
+<p>The linear elasticity equation is selected, with the variable shape set to vector.</p>
+<p><img alt="Equation Settings" src="screenshots/equation_settings.png" /></p>
+<hr />
+<h3 id="5-material-settings">5. Material Settings<a class="headerlink" href="#5-material-settings" title="Permanent link">&para;</a></h3>
+<p>Material properties for aluminium are set:</p>
 <ul>
-<li><a href="examples/harmonic_oscillator/">Harmonic Oscillator: Quantum Eigenvalues</a></li>
-<li><a href="examples/magnetic_dipole/">Magnetic Dipole: Magnetized Sphere</a></li>
-<li><a href="examples/quantum_tunneling/">Quantum Tunneling</a></li>
-<li><a href="examples/stokes_flow/">Stokes Flow Past a Sphere</a></li>
-<li><a href="examples/deformed_cantilever/">Deformed Cantilever: Thermoelastic Beam</a></li>
+<li>Young’s modulus: 69 GPa</li>
+<li>Poisson’s ratio: 0.3</li>
+<li>The thermal expansion coefficient and a temperature profile T(z) = z - h/2 are specified.</li>
 </ul>
-<p>Explore each example for ready-to-use simulation setups and meshes.</p>
+<p><img alt="Material Settings" src="screenshots/material_settings.png" /></p>
+<hr />
+<h3 id="6-boundary-settings">6. Boundary Settings<a class="headerlink" href="#6-boundary-settings" title="Permanent link">&para;</a></h3>
+<p>The root of the cantilever is fixed (zero displacement), while the other boundaries are left free.</p>
+<p><img alt="Boundary Settings" src="screenshots/boundary_settings.png" /></p>
+<hr />
+<h3 id="7-results">7. Results<a class="headerlink" href="#7-results" title="Permanent link">&para;</a></h3>
+<p>After running the simulation, the displacement field w is visualized using a slice field viewer.</p>
+<p><img alt="Results" src="screenshots/results.png" /></p>
+<hr />
 
 
 
@@ -973,10 +845,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
