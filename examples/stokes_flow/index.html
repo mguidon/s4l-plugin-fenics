@@ -13,10 +13,8 @@
       
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../harmonic_oscillator/">
       
-      
-        <link rel="next" href="../example2/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +22,7 @@
     
     
       
-        <title>Example 1 - Sim4Life FEniCS Plugin</title>
+        <title>Stokes Flow - Sim4Life FEniCS Plugin</title>
       
     
     
@@ -66,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#example-1-poisson-equation-on-a-unit-square" class="md-skip">
+        <a href="#stokes-flow-past-a-sphere" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Example 1
+              Stokes Flow
             
           </span>
         </div>
@@ -210,7 +208,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../quantum_tunneling/" class="md-tabs__link">
           
   
   
@@ -339,6 +337,52 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../quantum_tunneling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quantum Tunneling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../harmonic_oscillator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Harmonic Oscillator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -356,7 +400,7 @@
   
   
   <span class="md-ellipsis">
-    Example 1
+    Stokes Flow
     
   </span>
   
@@ -369,7 +413,7 @@
   
   
   <span class="md-ellipsis">
-    Example 1
+    Stokes Flow
     
   </span>
   
@@ -392,18 +436,120 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#files" class="md-nav__link">
+  <a href="#physics-background" class="md-nav__link">
     <span class="md-ellipsis">
-      Files
+      Physics Background
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
+  <a href="#mapping-to-the-weak-form" class="md-nav__link">
     <span class="md-ellipsis">
-      How it works
+      Mapping to the Weak Form
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulation-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulation Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulation Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-simulation-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Simulation Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-solver-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Solver Settings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#equation-and-subdomain-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equation and Subdomain Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Equation and Subdomain Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#velocity-field-mathbfu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Velocity Field \(\mathbf{u}\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pressure-field-p" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pressure Field \(p\)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the Simulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results Visualization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
     </span>
   </a>
   
@@ -413,98 +559,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../example2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Example 2
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../example3/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Example 3
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../example4/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Example 4
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../quantum_tunneling/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Quantum Tunneling
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -544,18 +598,120 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#files" class="md-nav__link">
+  <a href="#physics-background" class="md-nav__link">
     <span class="md-ellipsis">
-      Files
+      Physics Background
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
+  <a href="#mapping-to-the-weak-form" class="md-nav__link">
     <span class="md-ellipsis">
-      How it works
+      Mapping to the Weak Form
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulation-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulation Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulation Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-simulation-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Simulation Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-solver-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Solver Settings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#equation-and-subdomain-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equation and Subdomain Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Equation and Subdomain Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#velocity-field-mathbfu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Velocity Field \(\mathbf{u}\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pressure-field-p" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pressure Field \(p\)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the Simulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results Visualization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
     </span>
   </a>
   
@@ -580,20 +736,103 @@
   
 
 
-<h1 id="example-1-poisson-equation-on-a-unit-square">Example 1: Poisson Equation on a Unit Square<a class="headerlink" href="#example-1-poisson-equation-on-a-unit-square" title="Permanent link">&para;</a></h1>
-<p>This example demonstrates how to solve the Poisson equation on a unit square domain using the FEniCS plugin in Sim4Life. The mesh and simulation setup are pre-configured for quick experimentation.</p>
+<h1 id="stokes-flow-past-a-sphere">Stokes Flow Past a Sphere<a class="headerlink" href="#stokes-flow-past-a-sphere" title="Permanent link">&para;</a></h1>
+<p>This example demonstrates how to simulate steady Stokes flow past a sphere using the FEniCS plugin in Sim4Life. The setup and results can be loaded directly into Sim4Life using the provided mesh and simulation setup files.</p>
+<hr />
+<h2 id="physics-background">Physics Background<a class="headerlink" href="#physics-background" title="Permanent link">&para;</a></h2>
+<p>Stokes flow describes the motion of a viscous, incompressible fluid at low Reynolds numbers, where inertial forces are negligible compared to viscous forces. The governing equations are:</p>
+<div class="arithmatex">\[
+-\mu \nabla^2 \mathbf{u} + \nabla p = 0 \\
+\nabla \cdot \mathbf{u} = 0
+\]</div>
+<p>where <span class="arithmatex">\(\mathbf{u}\)</span> is the velocity field, <span class="arithmatex">\(p\)</span> is the pressure, and <span class="arithmatex">\(\mu\)</span> is the dynamic viscosity.</p>
+<hr />
+<h2 id="mapping-to-the-weak-form">Mapping to the Weak Form<a class="headerlink" href="#mapping-to-the-weak-form" title="Permanent link">&para;</a></h2>
+<p>The FEniCS plugin solves the weak form of the Stokes equations. For test functions <span class="arithmatex">\(\mathbf{v}\)</span> (velocity) and <span class="arithmatex">\(q\)</span> (pressure):</p>
+<div class="arithmatex">\[
+\int_\Omega \nabla \mathbf{u} : \nabla \mathbf{v} \, dx - \int_\Omega p \, \nabla \cdot \mathbf{v} \, dx + \int_\Omega q \, \nabla \cdot \mathbf{u} \, dx = 0
+\]</div>
+<p>This is implemented in the plugin by adding the following bilinear form in the subdomain settings for <span class="arithmatex">\(\mathbf{u}\)</span>:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">ufl</span><span class="o">.</span><span class="n">inner</span><span class="p">(</span><span class="n">ufl</span><span class="o">.</span><span class="n">grad</span><span class="p">(</span><span class="n">u</span><span class="p">),</span> <span class="n">ufl</span><span class="o">.</span><span class="n">grad</span><span class="p">(</span><span class="n">u_test</span><span class="p">))</span> <span class="o">-</span> <span class="n">ufl</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">u_test</span><span class="p">)</span> <span class="o">*</span> <span class="n">p</span> <span class="o">+</span> <span class="n">p_test</span> <span class="o">*</span> <span class="n">ufl</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+</code></pre></div>
+
+<p>where:
+- <code>u</code> is the velocity trial function (<span class="arithmatex">\(\mathbf{u}\)</span>)
+- <code>u_test</code> is the velocity test function (<span class="arithmatex">\(\mathbf{v}\)</span>)
+- <code>p</code> is the pressure trial function (<span class="arithmatex">\(p\)</span>)
+- <code>p_test</code> is the pressure test function (<span class="arithmatex">\(q\)</span>)</p>
+<p>This directly corresponds to the weak form above, with each term mapping as follows:
+- <code>ufl.inner(ufl.grad(u), ufl.grad(u_test))</code> <span class="arithmatex">\(\rightarrow\)</span> <span class="arithmatex">\(\int_\Omega \nabla \mathbf{u} : \nabla \mathbf{v} \, dx\)</span>
+- <code>- ufl.div(u_test) * p</code> <span class="arithmatex">\(\rightarrow\)</span> <span class="arithmatex">\(-\int_\Omega p \, \nabla \cdot \mathbf{v} \, dx\)</span>
+- <code>p_test * ufl.div(u)</code> <span class="arithmatex">\(\rightarrow\)</span> <span class="arithmatex">\(\int_\Omega q \, \nabla \cdot \mathbf{u} \, dx\)</span></p>
+<hr />
+<h2 id="model-setup">Model Setup<a class="headerlink" href="#model-setup" title="Permanent link">&para;</a></h2>
+<p>The computational domain consists of a sphere embedded in a rectangular box, representing the fluid region around the sphere. The mesh and subdomain assignments are shown below:</p>
+<p><img alt="Model Setup" src="screenshots/model.png" /></p>
+<hr />
+<h2 id="simulation-setup">Simulation Setup<a class="headerlink" href="#simulation-setup" title="Permanent link">&para;</a></h2>
+<h3 id="1-simulation-settings">1. Simulation Settings<a class="headerlink" href="#1-simulation-settings" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Physics</strong>: Poisson equation</li>
-<li><strong>Domain</strong>: Unit square</li>
-<li><strong>Boundary conditions</strong>: Dirichlet (u=0 on boundary)</li>
+<li><strong>Simulation Type:</strong> Stationary (steady-state)</li>
 </ul>
-<h2 id="files">Files<a class="headerlink" href="#files" title="Permanent link">&para;</a></h2>
+<p><img alt="Simulation Settings" src="screenshots/simulation_setup.png" /></p>
+<hr />
+<h3 id="2-solver-settings">2. Solver Settings<a class="headerlink" href="#2-solver-settings" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>mesh.xml</code>: The mesh for the unit square domain.</li>
-<li><code>simulation_setup.json</code>: Pre-configured simulation setup for Sim4Life.</li>
+<li><strong>Solver Type:</strong> Linear (Direct LU)</li>
+<li><strong>Field Type:</strong> Real</li>
 </ul>
-<h2 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
-<p>The Poisson equation is solved with homogeneous Dirichlet boundary conditions. You can open this project in Sim4Life, inspect the mesh, and run the simulation directly.</p>
+<p><img alt="Solver Settings" src="screenshots/solver_settings.png" /></p>
+<hr />
+<h2 id="equation-and-subdomain-settings">Equation and Subdomain Settings<a class="headerlink" href="#equation-and-subdomain-settings" title="Permanent link">&para;</a></h2>
+<h3 id="velocity-field-mathbfu">Velocity Field <span class="arithmatex">\(\mathbf{u}\)</span><a class="headerlink" href="#velocity-field-mathbfu" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Equation:</strong></li>
+</ul>
+<p><img alt="Equation for u" src="screenshots/equation_u.png" /></p>
+<ul>
+<li><strong>Subdomain Settings:</strong></li>
+</ul>
+<p><img alt="Subdomain Settings u" src="screenshots/subdomain_u.png" /></p>
+<ul>
+<li><strong>Dirichlet Boundary Conditions:</strong></li>
+<li>Inlet (left boundary): <span class="arithmatex">\(\mathbf{u} = (1, 0, 0)\)</span>
+    <img alt="Dirichlet u1" src="screenshots/dirichlet_u_1.png" /></li>
+<li>Sphere surface: <span class="arithmatex">\(\mathbf{u} = (0, 0, 0)\)</span> (no-slip)
+    <img alt="Dirichlet u2" src="screenshots/dirichlet_u_2.png" /></li>
+</ul>
+<h3 id="pressure-field-p">Pressure Field <span class="arithmatex">\(p\)</span><a class="headerlink" href="#pressure-field-p" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Equation:</strong></li>
+</ul>
+<p><img alt="Equation for p" src="screenshots/equation_p.png" /></p>
+<ul>
+<li><strong>Subdomain Settings:</strong></li>
+</ul>
+<p><img alt="Subdomain Settings p" src="screenshots/subdomain_p.png" /></p>
+<ul>
+<li><strong>Dirichlet Boundary Condition:</strong></li>
+<li>Outlet (right boundary): <span class="arithmatex">\(p = 0\)</span>
+    <img alt="Dirichlet p" src="screenshots/dirichlet_p.png" /></li>
+</ul>
+<hr />
+<h2 id="running-the-simulation">Running the Simulation<a class="headerlink" href="#running-the-simulation" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Load the mesh and simulation setup files into Sim4Life.</li>
+<li>Review and adjust the parameters as needed.</li>
+<li>Run the simulation to compute the velocity and pressure fields.</li>
+<li>Visualize the results to observe the flow pattern and pressure distribution around the sphere.</li>
+</ol>
+<hr />
+<h2 id="results-visualization">Results Visualization<a class="headerlink" href="#results-visualization" title="Permanent link">&para;</a></h2>
+<p>The figure below shows the velocity distribution around the sphere, visualized in Sim4Life using a combination of a slice field and vector field viewer. This allows you to see both the magnitude and direction of the flow as it moves past the sphere:</p>
+<p><img alt="Velocity distribution around the sphere" src="screenshots/results.png" /></p>
+<hr />
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Stokes_flow">Stokes Flow - Wikipedia</a></li>
+<li><a href="https://fenicsproject.org/">FEniCS Project Documentation</a></li>
+</ul>
 
 
 

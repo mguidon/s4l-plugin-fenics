@@ -1,4 +1,0 @@
-{
-  "simulation": "poisson_unit_square",
-  "description": "Pre-configured Poisson equation simulation on a unit square."
-}

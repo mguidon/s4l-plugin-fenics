@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../example1/">
+        <link rel="prev" href="../quantum_tunneling/">
       
       
-        <link rel="next" href="../example3/">
+        <link rel="next" href="../stokes_flow/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Example 2 - Sim4Life FEniCS Plugin</title>
+        <title>Harmonic Oscillator - Sim4Life FEniCS Plugin</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#example-2-linear-elasticity-in-2d" class="md-skip">
+        <a href="#quantum-harmonic-oscillator-eigenvalues" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Example 2
+              Harmonic Oscillator
             
           </span>
         </div>
@@ -210,7 +210,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../example1/" class="md-tabs__link">
+        <a href="../quantum_tunneling/" class="md-tabs__link">
           
   
   
@@ -342,12 +342,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../example1/" class="md-nav__link">
+      <a href="../quantum_tunneling/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Example 1
+    Quantum Tunneling
     
   </span>
   
@@ -379,7 +379,7 @@
   
   
   <span class="md-ellipsis">
-    Example 2
+    Harmonic Oscillator
     
   </span>
   
@@ -392,7 +392,7 @@
   
   
   <span class="md-ellipsis">
-    Example 2
+    Harmonic Oscillator
     
   </span>
   
@@ -415,18 +415,132 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#files" class="md-nav__link">
+  <a href="#physics-background" class="md-nav__link">
     <span class="md-ellipsis">
-      Files
+      Physics Background
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
+  <a href="#mapping-to-the-weak-form" class="md-nav__link">
     <span class="md-ellipsis">
-      How it works
+      Mapping to the Weak Form
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulation-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulation Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulation Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-simulation-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Simulation Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-solver-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Solver Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-global-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Global Expressions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Equation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-subdomain-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Subdomain Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-dirichlet-boundary-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Dirichlet Boundary Conditions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-physics-is-mapped" class="md-nav__link">
+    <span class="md-ellipsis">
+      How the Physics is Mapped
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the Simulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
     </span>
   </a>
   
@@ -448,58 +562,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../example3/" class="md-nav__link">
+      <a href="../stokes_flow/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Example 3
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../example4/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Example 4
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../quantum_tunneling/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Quantum Tunneling
+    Stokes Flow
     
   </span>
   
@@ -544,18 +612,132 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#files" class="md-nav__link">
+  <a href="#physics-background" class="md-nav__link">
     <span class="md-ellipsis">
-      Files
+      Physics Background
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
+  <a href="#mapping-to-the-weak-form" class="md-nav__link">
     <span class="md-ellipsis">
-      How it works
+      Mapping to the Weak Form
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulation-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulation Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulation Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-simulation-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Simulation Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-solver-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Solver Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-global-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Global Expressions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Equation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-subdomain-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Subdomain Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-dirichlet-boundary-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Dirichlet Boundary Conditions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-physics-is-mapped" class="md-nav__link">
+    <span class="md-ellipsis">
+      How the Physics is Mapped
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the Simulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
     </span>
   </a>
   
@@ -580,20 +762,85 @@
   
 
 
-<h1 id="example-2-linear-elasticity-in-2d">Example 2: Linear Elasticity in 2D<a class="headerlink" href="#example-2-linear-elasticity-in-2d" title="Permanent link">&para;</a></h1>
-<p>This example shows a simple linear elasticity simulation on a rectangular domain. The setup is ready to use in Sim4Life with the FEniCS plugin.</p>
+<h1 id="quantum-harmonic-oscillator-eigenvalues">Quantum Harmonic Oscillator: Eigenvalues<a class="headerlink" href="#quantum-harmonic-oscillator-eigenvalues" title="Permanent link">&para;</a></h1>
+<p>This example demonstrates how to compute the eigenvalues (energy states) of a quantum harmonic oscillator using the FEniCS plugin in Sim4Life. The setup and results can be loaded directly into Sim4Life using the <code>.smash</code> and <code>.sims</code> files in the <code>files</code> subfolder.</p>
+<hr />
+<h2 id="physics-background">Physics Background<a class="headerlink" href="#physics-background" title="Permanent link">&para;</a></h2>
+<p>The quantum harmonic oscillator is a fundamental model in quantum mechanics, describing a particle subject to a restoring force proportional to its displacement. The time-independent Schrödinger equation (TISE) for the 1D harmonic oscillator is:</p>
+<div class="arithmatex">\[
+-\frac{1}{2} \nabla^2 \phi_i + \frac{1}{2} x^2 \phi_i = E_i \phi_i
+\]</div>
+<p>where <span class="arithmatex">\(\phi_i\)</span> is the <span class="arithmatex">\(i\)</span>-th eigenfunction and <span class="arithmatex">\(E_i\)</span> the corresponding eigenvalue (energy level). Here, we use dimensionless units by scaling energy by <span class="arithmatex">\(\hbar\omega\)</span> and <span class="arithmatex">\(x\)</span> by <span class="arithmatex">\(\sqrt{\hbar/(m\omega)}\)</span>.</p>
+<p>The analytical solution for the energy levels is:</p>
+<div class="arithmatex">\[
+E_n = \hbar\omega\left(n + \frac{1}{2}\right)
+\]</div>
+<hr />
+<h2 id="mapping-to-the-weak-form">Mapping to the Weak Form<a class="headerlink" href="#mapping-to-the-weak-form" title="Permanent link">&para;</a></h2>
+<p>The FEniCS plugin solves the weak form of the eigenvalue problem:</p>
+<div class="arithmatex">\[
+\int_\Omega \left(\frac{1}{2} \nabla \phi_i \cdot \nabla v + \frac{1}{2} x^2 \phi_i v\right) dx = E_i \int_\Omega \phi_i v \, dx
+\]</div>
+<p>where <span class="arithmatex">\(v\)</span> is a test function. This is set up in the plugin by specifying the diffusion and linear terms, and selecting the eigenvalue solver mode.</p>
+<hr />
+<h2 id="model-setup">Model Setup<a class="headerlink" href="#model-setup" title="Permanent link">&para;</a></h2>
+<p>The computational domain is a 1D or 2D region representing the oscillator potential. The mesh and subdomain assignments are shown below:</p>
+<p><img alt="Model Setup" src="screenshots/model.png" /></p>
+<hr />
+<h2 id="simulation-setup">Simulation Setup<a class="headerlink" href="#simulation-setup" title="Permanent link">&para;</a></h2>
+<h3 id="1-simulation-settings">1. Simulation Settings<a class="headerlink" href="#1-simulation-settings" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Physics</strong>: Linear elasticity</li>
-<li><strong>Domain</strong>: Rectangle</li>
-<li><strong>Boundary conditions</strong>: Fixed left edge, traction on right edge</li>
+<li><strong>Simulation Type:</strong> Eigenvalue</li>
 </ul>
-<h2 id="files">Files<a class="headerlink" href="#files" title="Permanent link">&para;</a></h2>
+<p><img alt="Simulation Settings" src="screenshots/simulation_setup.png" /></p>
+<hr />
+<h3 id="2-solver-settings">2. Solver Settings<a class="headerlink" href="#2-solver-settings" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>mesh.xml</code>: The mesh for the rectangular domain.</li>
-<li><code>simulation_setup.json</code>: Simulation setup for linear elasticity.</li>
+<li><strong>Solver Type:</strong> Eigenvalue (e.g., SLEPc)</li>
+<li><strong>Number of Eigenvalues:</strong> (as set in the UI)</li>
 </ul>
-<h2 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
-<p>The example demonstrates how to set up and solve a 2D elasticity problem. Open the project in Sim4Life to explore the setup and results.</p>
+<p><img alt="Solver Settings" src="screenshots/solver_settings.png" /></p>
+<hr />
+<h3 id="3-global-expressions">3. Global Expressions<a class="headerlink" href="#3-global-expressions" title="Permanent link">&para;</a></h3>
+<p>Global expressions can be used to define parameters, but for this example, the potential is hardcoded as <span class="arithmatex">\(0.5 x^2\)</span>.</p>
+<p><img alt="Global Expressions" src="screenshots/global_expressions.png" /></p>
+<hr />
+<h3 id="4-equation">4. Equation<a class="headerlink" href="#4-equation" title="Permanent link">&para;</a></h3>
+<p>The equation settings specify the eigenvalue problem for the wave function <span class="arithmatex">\(\phi_i\)</span>.</p>
+<p><img alt="Equation" src="screenshots/equation_settings.png" /></p>
+<hr />
+<h3 id="5-subdomain-settings">5. Subdomain Settings<a class="headerlink" href="#5-subdomain-settings" title="Permanent link">&para;</a></h3>
+<p>The entire domain uses the same physics: kinetic and potential terms as described above.</p>
+<p><img alt="Subdomain Settings" src="screenshots/subdomain_settings.png" /></p>
+<hr />
+<h3 id="6-dirichlet-boundary-conditions">6. Dirichlet Boundary Conditions<a class="headerlink" href="#6-dirichlet-boundary-conditions" title="Permanent link">&para;</a></h3>
+<p>Dirichlet boundary conditions are applied to the domain boundaries:
+- <strong>Boundary Value:</strong> <span class="arithmatex">\(0\)</span> (the wave function vanishes at the edges)</p>
+<p><img alt="Dirichlet Boundary Conditions" src="screenshots/dirichlet_boundary_settings.png" /></p>
+<hr />
+<h2 id="how-the-physics-is-mapped">How the Physics is Mapped<a class="headerlink" href="#how-the-physics-is-mapped" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Diffusion coefficient:</strong> <span class="arithmatex">\(0.5\)</span> (for the kinetic term <span class="arithmatex">\(-\frac{1}{2} \nabla^2 \phi\)</span>)</li>
+<li><strong>Linear term:</strong> <span class="arithmatex">\(0.5 x^2\)</span> (for the potential energy)</li>
+<li>The plugin constructs the weak form and solves for the lowest eigenvalues and eigenfunctions.</li>
+</ul>
+<hr />
+<h2 id="running-the-simulation">Running the Simulation<a class="headerlink" href="#running-the-simulation" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Set up the geometry and physics as shown above.</li>
+<li>Configure the solver and boundary conditions.</li>
+<li>Run the simulation in eigenvalue mode.</li>
+</ol>
+<hr />
+<h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h2>
+<p>The simulation computes the lowest energy eigenvalues and eigenfunctions of the quantum harmonic oscillator. The animation below shows the eigenfunctions visualized with the slice field viewer:</p>
+<p><img alt="Eigenvalues Animation" src="screenshots/eigenvalues.gif" /></p>
+<hr />
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://fenicsproject.org/">FEniCS Project</a></li>
+<li><a href="https://en.wikiversity.org/wiki/User:Tclamb/FEniCS#Quantum_Harmonic_Oscillator">Quantum Harmonic Oscillator (Wikiversity)</a></li>
+</ul>
 
 
 
