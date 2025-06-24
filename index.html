@@ -364,6 +364,66 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#supported-equation-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Equation Categories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported Equation Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pde-partial-differential-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. PDE (Partial Differential Equation)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-solid-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Solid Mechanics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-weak-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Weak Form
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Applications
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
       Examples
@@ -490,6 +550,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="examples/magnetic_dipole/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Magnetic Dipole
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -566,6 +649,66 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#supported-equation-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Equation Categories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported Equation Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pde-partial-differential-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. PDE (Partial Differential Equation)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-solid-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Solid Mechanics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-weak-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Weak Form
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Applications
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
       Examples
@@ -616,12 +759,99 @@
 <p>This design enables users to run complex finite element simulations within Sim4Life, while benefiting from the flexibility and power of the FEniCS library.</p>
 <h3 id="seamless-postprocessing-integration">Seamless Postprocessing Integration<a class="headerlink" href="#seamless-postprocessing-integration" title="Permanent link">&para;</a></h3>
 <p>Simulation results produced by the FEniCS solver are fully compatible with the Sim4Life postprocessing pipeline. Results can be directly viewed, inspected, and analyzed using the integrated Sim4Life viewers, allowing for efficient visualization and further analysis without additional conversion steps.</p>
+<hr />
+<h2 id="supported-equation-categories">Supported Equation Categories<a class="headerlink" href="#supported-equation-categories" title="Permanent link">&para;</a></h2>
+<p>The Sim4Life FEniCS plugin supports several categories of equations, each tailored to common classes of physics problems:</p>
+<h3 id="1-pde-partial-differential-equation">1. <strong>PDE (Partial Differential Equation)</strong><a class="headerlink" href="#1-pde-partial-differential-equation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Purpose:</strong> Solve standard scalar PDEs such as diffusion, heat conduction, and Poisson’s equation.</li>
+<li><strong>User Inputs:</strong> Diffusion coefficient, linear term, source term, divergence term, boundary conditions.</li>
+<li><strong>Example Equation:</strong><br />
+  $$
+  \nabla \cdot (c \nabla u) + l u + \nabla \cdot \mathbf{M} + f = 0
+  $$</li>
+<li><strong>Typical Applications:</strong>  </li>
+<li>Heat transfer: <span class="arithmatex">\(c\)</span> = thermal conductivity, <span class="arithmatex">\(u\)</span> = temperature  </li>
+<li>Electrostatics: <span class="arithmatex">\(c\)</span> = permittivity, <span class="arithmatex">\(u\)</span> = potential  </li>
+<li>Diffusion: <span class="arithmatex">\(c\)</span> = diffusion coefficient, <span class="arithmatex">\(u\)</span> = concentration</li>
+</ul>
+<h3 id="2-solid-mechanics">2. <strong>Solid Mechanics</strong><a class="headerlink" href="#2-solid-mechanics" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Purpose:</strong> Model linear elasticity and structural mechanics problems.</li>
+<li><strong>User Inputs:</strong> Young’s modulus, Poisson’s ratio, body force, thermal expansion, displacement/traction boundary conditions.</li>
+<li><strong>Example Equation:</strong><br />
+  $$
+  \nabla \cdot \sigma + \mathbf{F} = 0
+  $$
+  where <span class="arithmatex">\(\sigma\)</span> is the stress tensor, <span class="arithmatex">\(\mathbf{F}\)</span> is the body force.</li>
+<li><strong>Typical Applications:</strong>  </li>
+<li>Deformation of solids under load  </li>
+<li>Thermoelasticity  </li>
+<li>Biomechanics</li>
+</ul>
+<h3 id="3-weak-form">3. <strong>Weak Form</strong><a class="headerlink" href="#3-weak-form" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Purpose:</strong> Directly specify custom variational (weak) forms for advanced or non-standard problems.</li>
+<li><strong>User Inputs:</strong> UFL (Unified Form Language) expressions for bilinear and linear forms, integration domains, boundary conditions.</li>
+<li><strong>Example Equation:</strong><br />
+  $$
+  \int_\Omega \nabla u \cdot \nabla v \, dx = \int_\Omega f v \, dx
+  $$
+  (or any custom weak form)</li>
+<li><strong>Typical Applications:</strong>  </li>
+<li>Stokes flow (fluid dynamics)  </li>
+<li>Mixed finite element methods  </li>
+<li>Custom multiphysics couplings</li>
+</ul>
+<hr />
+<h2 id="example-applications">Example Applications<a class="headerlink" href="#example-applications" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Category</th>
+<th>Physics/Equation Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Harmonic Oscillator</td>
+<td>PDE</td>
+<td>Quantum mechanics, eigenvalue problem</td>
+</tr>
+<tr>
+<td>Magnetic Dipole</td>
+<td>PDE/Weak Form</td>
+<td>Magnetostatics, Poisson’s equation</td>
+</tr>
+<tr>
+<td>Quantum Tunneling</td>
+<td>PDE</td>
+<td>Time-dependent Schrödinger equation</td>
+</tr>
+<tr>
+<td>Stokes Flow</td>
+<td>Weak Form</td>
+<td>Fluid dynamics, Stokes equations</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Create a Simulation:</strong> Select "FEniCS" as the simulation type in Sim4Life.</li>
+<li><strong>Add Equations:</strong> Choose from PDE, Solid Mechanics, or Weak Form. Assign them to mesh domains.</li>
+<li><strong>Set Parameters:</strong> Enter coefficients, material properties, or custom expressions as needed.</li>
+<li><strong>Define Boundary Conditions:</strong> Apply Dirichlet (fixed value) or Neumann/flux (derivative) conditions to boundaries.</li>
+<li><strong>Run and Analyze:</strong> Solve the problem and visualize results within Sim4Life.</li>
+</ol>
+<hr />
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="examples/example1/README.md">Example 1: Poisson Equation on a Unit Square</a></li>
-<li><a href="examples/example2/README.md">Example 2: Linear Elasticity in 2D</a></li>
-<li><a href="examples/example3/README.md">Example 3: Heat Equation (Transient)</a></li>
-<li><a href="examples/example4/README.md">Example 4: Laplace Equation on a Circle</a></li>
+<li><a href="examples/harmonic_oscillator/">Harmonic Oscillator: Quantum Eigenvalues</a></li>
+<li><a href="examples/magnetic_dipole/">Magnetic Dipole: Magnetized Sphere</a></li>
+<li><a href="examples/quantum_tunneling/">Quantum Tunneling</a></li>
+<li><a href="examples/stokes_flow/">Stokes Flow Past a Sphere</a></li>
 </ul>
 <p>Explore each example for ready-to-use simulation setups and meshes.</p>
 

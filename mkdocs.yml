@@ -18,6 +18,7 @@ nav:
       - Quantum Tunneling: examples/quantum_tunneling/README.md
       - Harmonic Oscillator: examples/harmonic_oscillator/README.md
       - Stokes Flow: examples/stokes_flow/README.md
+      - Magnetic Dipole: examples/magnetic_dipole/README.md
 markdown_extensions:
   - admonition
   - codehilite

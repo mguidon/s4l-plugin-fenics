@@ -13,10 +13,8 @@
       
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../stokes_flow/">
       
-      
-        <link rel="next" href="../harmonic_oscillator/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +22,7 @@
     
     
       
-        <title>Quantum Tunneling - Sim4Life FEniCS Plugin</title>
+        <title>Magnetic Dipole - Sim4Life FEniCS Plugin</title>
       
     
     
@@ -66,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#quantum-tunneling" class="md-skip">
+        <a href="#magnetized-sphere-magnetic-dipole-field" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Quantum Tunneling
+              Magnetic Dipole
             
           </span>
         </div>
@@ -210,7 +208,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../quantum_tunneling/" class="md-tabs__link">
           
   
   
@@ -339,32 +337,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Quantum Tunneling
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../quantum_tunneling/" class="md-nav__link">
         
   
   
@@ -375,158 +351,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#physics-background" class="md-nav__link">
-    <span class="md-ellipsis">
-      Physics Background
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#model-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Model Setup
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#simulation-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simulation Setup
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Simulation Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-simulation-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Simulation Settings
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-solver-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Solver Settings
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-global-expressions" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Global Expressions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-equation" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Equation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-free-space" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Free Space
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-barrier" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Barrier
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-dirichlet-boundary-conditions" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Dirichlet Boundary Conditions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-the-physics-is-mapped" class="md-nav__link">
-    <span class="md-ellipsis">
-      How the Physics is Mapped
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#running-the-simulation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Running the Simulation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#results" class="md-nav__link">
-    <span class="md-ellipsis">
-      Results
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -582,10 +406,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../magnetic_dipole/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Magnetic Dipole
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -596,6 +442,137 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#physics-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physics Background
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulation-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulation Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulation Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-solver-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Solver Settings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#equation-and-subdomain-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equation and Subdomain Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Equation and Subdomain Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dirichlet-problem-u_dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dirichlet Problem (\(u_{dir}\))
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neumann-problem-u_neu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neumann Problem (\(u_{neu}\))
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-processing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the Simulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Results Visualization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -663,63 +640,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-simulation-settings" class="md-nav__link">
+  <a href="#1-solver-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Simulation Settings
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-solver-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Solver Settings
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-global-expressions" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Global Expressions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-equation" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Equation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-free-space" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Free Space
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-barrier" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Barrier
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-dirichlet-boundary-conditions" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Dirichlet Boundary Conditions
+      1. Solver Settings
     </span>
   </a>
   
@@ -731,9 +654,42 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-the-physics-is-mapped" class="md-nav__link">
+  <a href="#equation-and-subdomain-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      How the Physics is Mapped
+      Equation and Subdomain Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Equation and Subdomain Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dirichlet-problem-u_dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dirichlet Problem (\(u_{dir}\))
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neumann-problem-u_neu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neumann Problem (\(u_{neu}\))
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-processing
     </span>
   </a>
   
@@ -749,9 +705,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#results" class="md-nav__link">
+  <a href="#results-visualization" class="md-nav__link">
     <span class="md-ellipsis">
-      Results
+      Results Visualization
     </span>
   </a>
   
@@ -785,99 +741,109 @@
   
 
 
-<h1 id="quantum-tunneling">Quantum Tunneling<a class="headerlink" href="#quantum-tunneling" title="Permanent link">&para;</a></h1>
-<p>This example can be loaded directly into Sim4Life by uploading the provided <code>.smash</code> and <code>.sims</code> files from the <code>files</code> subfolder. To do this, use the burger menu in the Sim4Life user interface and select the <code>.smash</code> file to load the complete example setup.</p>
-<p>This example demonstrates how to simulate <strong>quantum tunneling</strong> using the FEniCS plugin in Sim4Life. The setup models a Gaussian wave packet incident on a potential barrier, illustrating the fundamental quantum phenomenon of tunneling.</p>
+<h1 id="magnetized-sphere-magnetic-dipole-field">Magnetized Sphere: Magnetic Dipole Field<a class="headerlink" href="#magnetized-sphere-magnetic-dipole-field" title="Permanent link">&para;</a></h1>
+<p>This example demonstrates how to simulate the magnetic potential and field generated by a uniformly magnetized sphere using the FEniCS plugin in Sim4Life. The setup and results can be loaded directly into Sim4Life using the <code>.smash</code> and <code>.sims</code> files in the <code>files</code> subfolder.</p>
 <hr />
 <h2 id="physics-background">Physics Background<a class="headerlink" href="#physics-background" title="Permanent link">&para;</a></h2>
-<p>Quantum tunneling is a phenomenon where a quantum particle can pass through a potential barrier even if its energy is less than the barrier height. This is governed by the time-dependent Schrödinger equation:</p>
+<p>A uniformly magnetized sphere produces a uniform magnetic field inside and a dipole field outside. The magnetostatic potential <span class="arithmatex">\(u\)</span> satisfies:</p>
 <div class="arithmatex">\[
-i \frac{\partial u}{\partial t} = -\frac{1}{2} \nabla^2 u + V(x) u
+\nabla \cdot (-\nabla u + \mathbf{M}) = 0
 \]</div>
-<p>where <span class="arithmatex">\(u(x, t)\)</span> is the wave function and <span class="arithmatex">\(V(x)\)</span> is the potential (nonzero in the barrier region).</p>
+<p>where <span class="arithmatex">\(\mathbf{M}\)</span> is the uniform magnetization. The solution is computed in a finite air cube, so the outer boundary is truncated. Two types of boundary conditions are used:</p>
+<ul>
+<li><strong>Dirichlet</strong>: The potential is fixed on the boundary.</li>
+<li><strong>Neumann</strong>: The normal derivative (flux) is fixed on the boundary.</li>
+</ul>
+<p>Averaging the two solutions provides the best approximation to the analytical solution in the truncated domain.</p>
 <hr />
 <h2 id="model-setup">Model Setup<a class="headerlink" href="#model-setup" title="Permanent link">&para;</a></h2>
-<p>The computational domain is modeled as a rectangle, subdivided into two main regions: a central <strong>barrier</strong> and surrounding <strong>free space</strong>. This allows us to represent a potential barrier in the middle of the domain, with free propagation regions on either side. The mesh and subdomain assignments are shown below:</p>
+<p>The computational domain consists of a sphere (magnetized region) embedded in a cubic air domain. The mesh and subdomain assignments are shown below:</p>
 <p><img alt="Model Setup" src="screenshots/model.png" /></p>
 <hr />
 <h2 id="simulation-setup">Simulation Setup<a class="headerlink" href="#simulation-setup" title="Permanent link">&para;</a></h2>
-<h3 id="1-simulation-settings">1. Simulation Settings<a class="headerlink" href="#1-simulation-settings" title="Permanent link">&para;</a></h3>
-<p>We use the <strong>Time-Domain</strong> as the simulation type for this example.</p>
-<p><img alt="Simulation Settings" src="screenshots/simulation_setup.png" /></p>
-<hr />
-<h3 id="2-solver-settings">2. Solver Settings<a class="headerlink" href="#2-solver-settings" title="Permanent link">&para;</a></h3>
+<h3 id="1-solver-settings">1. Solver Settings<a class="headerlink" href="#1-solver-settings" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Field Type</strong>: Complex</li>
-<li><strong>Solver Type</strong>: Linear (Direct LU)</li>
-<li><strong>Time Domain Solver</strong>:</li>
-<li>Method: LobattoIIIA (Runge-Kutta)</li>
-<li>Stages: 3</li>
-<li>Initial Time Step: 0.001</li>
-<li>Max Time Step: 1</li>
-<li>Duration: 0.15</li>
+<li><strong>Solver Type:</strong> Linear (Direct LU)</li>
+<li><strong>Field Type:</strong> Real</li>
 </ul>
 <p><img alt="Solver Settings" src="screenshots/solver_settings.png" /></p>
 <hr />
-<h3 id="3-global-expressions">3. Global Expressions<a class="headerlink" href="#3-global-expressions" title="Permanent link">&para;</a></h3>
-<p>Global expressions define the physical parameters used in the simulation:
-- <code>k0 = 20</code> (wavenumber of the initial wave packet)
-- <code>E0 = 0.5*k0**2</code> (energy of the wave packet)
-- <code>DV = 10</code> (potential barrier height)</p>
-<p><img alt="Global Expressions" src="screenshots/global_expressions.png" /></p>
-<hr />
-<h3 id="4-equation">4. Equation<a class="headerlink" href="#4-equation" title="Permanent link">&para;</a></h3>
-<p>The time-dependent Schrödinger equation is solved for the wave function <span class="arithmatex">\(u\)</span>.</p>
+<h2 id="equation-and-subdomain-settings">Equation and Subdomain Settings<a class="headerlink" href="#equation-and-subdomain-settings" title="Permanent link">&para;</a></h2>
+<h3 id="dirichlet-problem-u_dir">Dirichlet Problem (<span class="arithmatex">\(u_{dir}\)</span>)<a class="headerlink" href="#dirichlet-problem-u_dir" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Initial Condition:</strong>
-  <code>python
-  ufl.exp(1j*x[1]*k0)*ufl.exp(-ufl.inner(x,x)/(2*0.5**2))</code>
-  This represents a Gaussian wave packet with wavenumber <code>k0</code>.</li>
+<li><strong>Equation:</strong></li>
 </ul>
-<p><img alt="Equation" src="screenshots/equation_settings.png" /></p>
-<hr />
-<h3 id="5-free-space">5. Free Space<a class="headerlink" href="#5-free-space" title="Permanent link">&para;</a></h3>
+<p><img alt="Equation for \(u_{dir}\)" src="screenshots/equation_u_dir.png" /></p>
 <ul>
-<li><strong>Diffusion Coefficient:</strong> <code>-1/(2j)</code> (kinetic term)</li>
-<li><strong>Linear Term:</strong> <code>0</code> (no potential in free space)</li>
+<li><strong>Subdomain Settings:</strong></li>
+<li>Outer region:
+    <img alt="Outer subdomain" src="screenshots/u_dir_outer.png" /></li>
+<li>
+<p>Inner sphere:
+    <img alt="Inner subdomain" src="screenshots/u_dir_inner.png" /></p>
+</li>
+<li>
+<p><strong>Boundary Conditions:</strong></p>
+</li>
+<li>Dirichlet at a single point (patch_point):
+    <img alt="Dirichlet BC at point" src="screenshots/u_dir_dirichlet.png" /></li>
+<li>
+<p>Dirichlet on the remaining boundary (patch_boundary):
+    <img alt="Dirichlet BC on boundary" src="screenshots/u_dir_dirichlet.png" /></p>
+</li>
+<li>
+<p><strong>Flux Boundary Condition:</strong>
+  <img alt="Flux BC" src="screenshots/u_dir_flux.png" /></p>
+</li>
 </ul>
-<p><img alt="Free Space" src="screenshots/free_space.png" /></p>
-<hr />
-<h3 id="6-barrier">6. Barrier<a class="headerlink" href="#6-barrier" title="Permanent link">&para;</a></h3>
+<h3 id="neumann-problem-u_neu">Neumann Problem (<span class="arithmatex">\(u_{neu}\)</span>)<a class="headerlink" href="#neumann-problem-u_neu" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Diffusion Coefficient:</strong> <code>-1/(2j)</code> (kinetic term)</li>
-<li><strong>Linear Term:</strong> <code>(E0 + DV)/(1j)</code> (potential energy in the barrier)</li>
+<li><strong>Equation:</strong></li>
 </ul>
-<p><img alt="Barrier" src="screenshots/barrier.png" /></p>
-<hr />
-<h3 id="7-dirichlet-boundary-conditions">7. Dirichlet Boundary Conditions<a class="headerlink" href="#7-dirichlet-boundary-conditions" title="Permanent link">&para;</a></h3>
-<p>A Dirichlet boundary condition is applied:
-- <strong>Boundary Value:</strong> <code>0</code> (the wave function is set to zero on the specified boundary)</p>
-<p><img alt="Dirichlet Boundary Conditions" src="screenshots/boundary_settings.png" /></p>
-<hr />
-<h2 id="how-the-physics-is-mapped">How the Physics is Mapped<a class="headerlink" href="#how-the-physics-is-mapped" title="Permanent link">&para;</a></h2>
+<p><img alt="Equation for \(u_{neu}\)" src="screenshots/equation_u_neu.png" /></p>
 <ul>
-<li>The <strong>diffusion coefficient</strong> <span class="arithmatex">\(-1/(2j)\)</span> implements the kinetic term <span class="arithmatex">\(-\frac{1}{2} \nabla^2 u\)</span>.</li>
-<li>The <strong>linear term</strong> in the barrier region adds the potential energy.</li>
-<li>The <strong>weak form</strong> is constructed automatically by the plugin, following the variational principle.</li>
+<li><strong>Subdomain Settings:</strong></li>
+<li>Outer region:
+    <img alt="Outer subdomain" src="screenshots/u_neu_outer.png" /></li>
+<li>
+<p>Inner sphere:
+    <img alt="Inner subdomain" src="screenshots/u_neu_inner.png" /></p>
+</li>
+<li>
+<p><strong>Boundary Conditions:</strong></p>
+</li>
+<li>Dirichlet at a single point (patch_point):
+    <img alt="Dirichlet BC at point" src="screenshots/u_neu_dirichlet.png" /></li>
 </ul>
+<hr />
+<h2 id="post-processing">Post-processing<a class="headerlink" href="#post-processing" title="Permanent link">&para;</a></h2>
+<p>After solving both problems, the following quantities are computed:</p>
+<ul>
+<li><strong>Average Potential:</strong>
+  $$
+u_{mean} = 0.5 (u_{dir} + u_{neu})$$</li>
+<li><strong>Magnetic Field:</strong>
+  <span class="arithmatex">\(<span class="arithmatex">\(\mathbf{H} = \nabla u_{dir}\)</span>\)</span></li>
+</ul>
+<p><img alt="Post-processing expressions" src="screenshots/expressions.png" /></p>
+<p>The average potential <span class="arithmatex">\(u_{mean}\)</span> is expected to be closest to the analytical solution everywhere, especially near the boundary. The magnetic field <span class="arithmatex">\(\mathbf{H}\)</span> should be uniform inside the sphere and dipole-like outside.</p>
 <hr />
 <h2 id="running-the-simulation">Running the Simulation<a class="headerlink" href="#running-the-simulation" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Set up the geometry and physics as shown above.</li>
-<li>Configure the solver and boundary conditions.</li>
-<li>Run the simulation in time-domain mode.</li>
+<li>Load the mesh and simulation setup files into Sim4Life.</li>
+<li>Review and adjust the parameters as needed.</li>
+<li>Run the simulation to compute the magnetic potential and field.</li>
+<li>Visualize the results to compare with the analytical solution for a uniformly magnetized sphere.</li>
 </ol>
-<p>The solver output will show progress through time steps and confirm successful completion.</p>
 <hr />
-<h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h2>
-<p>The simulation produces the time evolution of the wave function, showing both reflection and tunneling through the barrier.</p>
-<p><img alt="Quantum wave packet evolution" src="screenshots/qm_wave.gif" /></p>
-<p>The results can be interactively inspected and visualized using the built-in viewers in Sim4Life, allowing you to explore the wave function dynamics over time.</p>
+<h2 id="results-visualization">Results Visualization<a class="headerlink" href="#results-visualization" title="Permanent link">&para;</a></h2>
+<p>The figure below shows the post-processed equations for mean field with a slice field viewer and the magnetic field using a vector field viewer.</p>
+<p><img alt="Meanfield and H Field" src="screenshots/results.png" /></p>
 <hr />
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://fenicsproject.org/">FEniCS Project</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Rectangular_potential_barrier">Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Magnetostatics#Uniformly_magnetized_sphere">Magnetized Sphere - Analytical Solution</a></li>
+<li><a href="https://fenicsproject.org/">FEniCS Project Documentation</a></li>
 </ul>
 
 
