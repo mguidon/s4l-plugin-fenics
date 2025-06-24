@@ -60,17 +60,3 @@ This plugin is implemented as a modular component with:
 - Python 3.11 or higher
 - FEniCS library (compatible version)
 
-## Installation
-
-The plugin can be installed directly through pip:
-
-```bash
-pip install s4l-fenics-plugin
-```
-
-For development installations:
-
-```bash
-git clone <repository-url>
-cd fenics
-pip install -e .

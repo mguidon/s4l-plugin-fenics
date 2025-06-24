@@ -134,3 +134,4 @@ The results can be interactively inspected and visualized using the built-in vie
 ## References
 
 - [FEniCS Project](https://fenicsproject.org/)
+- [Wikipedia](https://en.wikipedia.org/wiki/Rectangular_potential_barrier)

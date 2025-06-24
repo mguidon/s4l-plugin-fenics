@@ -15,11 +15,9 @@ theme:
 nav:
   - Home: index.md
   - Examples:
-      - Example 1: examples/example1/README.md
-      - Example 2: examples/example2/README.md
-      - Example 3: examples/example3/README.md
-      - Example 4: examples/example4/README.md
       - Quantum Tunneling: examples/quantum_tunneling/README.md
+      - Harmonic Oscillator: examples/harmonic_oscillator/README.md
+      - Stokes Flow: examples/stokes_flow/README.md
 markdown_extensions:
   - admonition
   - codehilite

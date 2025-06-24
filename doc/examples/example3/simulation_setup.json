@@ -1,4 +1,0 @@
-{
-  "simulation": "heat_equation_transient",
-  "description": "Pre-configured transient heat equation simulation."
-}
