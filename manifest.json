@@ -9,7 +9,6 @@
     "details" : "README.md",
     "license" : "LICENSE",
     "tags" : ["Multi Physics", "Partial Differential Equations"],
-    "links" : {"repository" : "github.com/yourusername/yourrepository",
-              "website" : "https://yourwebsite.com",
-              "documentation" : "https://yourwebsite.com/docs"}
+    "links" : {"repository" : "https://github.com/mguidon/s4l-plugin-fenics",
+              "documentation" : "https://mguidon.github.io/s4l-plugin-fenics/"}
 }
